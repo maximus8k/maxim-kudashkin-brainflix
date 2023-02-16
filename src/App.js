@@ -7,12 +7,13 @@ import Main from './components/Main/Main';
 class App extends React.Component {
   state = {
     Vids: Vids,
-    currentVideo: Vids[0]
+    playingVideo: Vids[0]
   }
+
 changeVideo = (id) => {
   const newVideoId = this.state.Vids.findIndex(video => id === video.id)
   this.setState({
-    currentVideo:this.state.Vids[newVideoId]
+    playingVideo:this.state.Vids[newVideoId]
   })
 }
 
@@ -23,7 +24,7 @@ changeVideo = (id) => {
       <Header/>
       <Main
         Vids={this.state.Vids}
-        currentVideo={this.state.currentVideo}
+        playingVideo={this.state.playingVideo}
         changeVideo={this.changeVideo} 
         />
         
