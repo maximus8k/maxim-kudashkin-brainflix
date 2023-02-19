@@ -1,24 +1,24 @@
 @use '../../styles/partials/colors' as *;
 @use '../../styles/partials/mixins' as *;
 
-.video-list__header{
+.next__header{
     font-size: 24px;
     font-weight: 400;
     color: $Silver;
 }
-.video-list__listing{
+.next__listing{
     padding-left: 1rem;
 }
 
-.video-list__header{
+.next__header{
     padding-left: 1rem;
 }
 
 @include desktop{
-    .video-list__header{
+    .next__header{
         padding-top: 1.5rem;
     }
-    .video-list{
+    .next{
         margin-left: 1rem;
     }
 }

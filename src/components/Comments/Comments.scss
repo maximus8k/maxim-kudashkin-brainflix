@@ -5,7 +5,7 @@
     padding:0 1rem;
 }
 
-.comments-list{
+.list{
     list-style-type: none;
     border-bottom: solid 1px $Mercury;
     padding-top: 1rem;
@@ -45,7 +45,7 @@
 }
 
 @include tablet{
-    .comments-list{
+    .list{
         &__item--date{
             font-size: 14px;
         }
@@ -56,7 +56,7 @@
 }
 
 @include desktop{
-    .comments-list{
+    .list{
         padding-top: 2rem;
         padding-bottom: 2rem;
 

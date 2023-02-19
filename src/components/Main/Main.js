@@ -1,32 +1,32 @@
-import PlayingVideo from "../PlayingVideo/PlayingVideo";
+import CurrentVideo from "../CurrentVideo/CurrentVideo";
 import VideoDetails from "../VideoDetails/VideoDetails";
-import NextVideos from "../NextVideos/NextVideos";
+import NextVideo from "../NextVideos/NextVideos";
 import Comments from "../Comments/Comments";
 import './Main.scss'
 import CommentForm from "../CommentForm/CommentForm";
-export default function Main({Vids, playingVideo, changeVideo}){
+export default function Main({Vids, currentVideo, changeVideo}){
     return(
         <>
-        <PlayingVideo
-                playingVideo={playingVideo}
+        <CurrentVideo
+                currentVideo={currentVideo}
             />
         <div className="main-container">
            <div className="main-small-container">
             <VideoDetails
-                playingVideo={playingVideo}
+                currentVideo={currentVideo}
             />
             <CommentForm
-                playingVideo={playingVideo}
+                currentVideo={currentVideo}
             />
             <Comments
                 Vids={Vids}
-                playingVideo={playingVideo}
+                currentVideo={currentVideo}
             />
             </div> 
             <div className="video-list-container">
-            <NextVideos
+            <NextVideo
                 Vids={Vids}
-                playingVideo={playingVideo}
+                currentVideo={currentVideo}
                 changeVideo={changeVideo}
             />
             </div>

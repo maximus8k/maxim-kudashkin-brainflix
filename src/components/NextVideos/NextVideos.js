@@ -1,14 +1,14 @@
 import './NextVideos.scss';
-import Video from '../../data/videos.json';
+import Video from '../Video/Video';
 
 
-export default function VideoList({Vids, playingVideo, changeVideo}){
+export default function NextVideos({Vids, currentVideo, changeVideo}){
    
     return(
-        <section className='video-list'>
-        <h2 className='video-list__header'>NEXT VIDEOS</h2>
-            <ul className='video-list__listing'>
-            {Vids.filter(video => video.id !== playingVideo.id)
+        <section className='next'>
+        <h2 className='next__header'>NEXT VIDEOS</h2>
+            <ul className='next__listing'>
+            {Vids.filter(video => video.id !== currentVideo.id)
             .map(video => {
                 return(
                     <Video
@@ -28,3 +28,6 @@ export default function VideoList({Vids, playingVideo, changeVideo}){
     )
 
 }
+  
+        
+

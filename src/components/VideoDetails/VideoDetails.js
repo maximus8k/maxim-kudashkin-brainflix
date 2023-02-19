@@ -3,7 +3,7 @@ import Views from '../../assets/icons/views.svg';
 import Likes from '../../assets/icons/likes.svg';
 
 
-export default function VideoInfo({ currentVideo}){
+export default function VideoDetails({currentVideo}){
     return (
       <div className='main-container'>
           <div className='video__content-container'>

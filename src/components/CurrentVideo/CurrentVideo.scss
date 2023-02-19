@@ -1,6 +1,7 @@
 @use '../../styles/partials/colors' as *;
 @use '../../styles/partials/mixins' as *;
 
+
 .video{
     width: 100%;
     &__title{
@@ -84,7 +85,7 @@
 
 @include tablet{
   .video{
-      background-color: black;
+      background-color: $Black;
       padding: 0 2.25rem;
 
     &__title{
