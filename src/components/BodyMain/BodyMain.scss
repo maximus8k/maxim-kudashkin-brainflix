@@ -2,22 +2,22 @@
 @use '../../styles/partials/mixins' as *;
 
 @include tablet{
-    .main-small-container{
+    .box{
         padding-left: 36px;
     }
 }
 
 @include desktop{
-    .main-container{
+    .container{
         display: flex;
         
     }
-    .main-small-container{
+    .box{
         flex-direction: column;
         padding-left: 7.5rem;
         
     }
-    .video-list-container{
+    .list{
         padding-right: 7.5rem;
         border-left: solid 1px $Mercury;
     }

@@ -1,17 +1,19 @@
+import './BodyMain.scss'
 import CurrentVideo from "../CurrentVideo/CurrentVideo";
 import VideoDetails from "../VideoDetails/VideoDetails";
 import NextVideo from "../NextVideos/NextVideos";
 import Comments from "../Comments/Comments";
-import './Main.scss'
 import CommentForm from "../CommentForm/CommentForm";
-export default function Main({Vids, currentVideo, changeVideo}){
+
+//Main Display on home page
+export default function BodyMain({Vids, currentVideo, changeVideo}){
     return(
         <>
         <CurrentVideo
                 currentVideo={currentVideo}
             />
-        <div className="main-container">
-           <div className="main-small-container">
+        <div className="container">
+           <div className="box">
             <VideoDetails
                 currentVideo={currentVideo}
             />
@@ -23,7 +25,7 @@ export default function Main({Vids, currentVideo, changeVideo}){
                 currentVideo={currentVideo}
             />
             </div> 
-            <div className="video-list-container">
+            <div className="list">
             <NextVideo
                 Vids={Vids}
                 currentVideo={currentVideo}

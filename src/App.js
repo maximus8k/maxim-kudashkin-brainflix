@@ -2,7 +2,7 @@ import './App.scss';
 import React from 'react';
 import Header from "./components/Header/Header";
 import Vids from './data/video-details.json';
-import Main from './components/Main/Main';
+import BodyMain from './components/BodyMain/BodyMain';
 
 class App extends React.Component {
   state = {
@@ -21,7 +21,7 @@ class App extends React.Component {
     return (
     <>
         <Header/>
-        <Main
+        <BodyMain
           Vids={this.state.Vids}
           currentVideo={this.state.currentVideo}
           changeVideo={this.changeVideo}
