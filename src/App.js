@@ -1,34 +1,30 @@
 import './App.scss';
 import React from 'react';
 import Header from "./components/Header/Header";
-import Vids from './data/video-details.json';
-import BodyMain from './components/BodyMain/BodyMain';
+import Upload from './pages/Upload/Upload';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './pages/Home/Home';
+
+
 
 class App extends React.Component {
-  state = {
-    Vids: Vids,
-    currentVideo: Vids[0]
-  }
-
-  changeVideo = (id) => {
-    const newVideoId = this.state.Vids.findIndex(video => id === video.id)
-    this.setState({
-      currentVideo:this.state.Vids[newVideoId]
-    })
-  }
 
   render() {
-    return (
-    <>
-        <Header/>
-        <BodyMain
-          Vids={this.state.Vids}
-          currentVideo={this.state.currentVideo}
-          changeVideo={this.changeVideo}
-          />
-      </>
-    );
+  return (
+   
+   <BrowserRouter>
+      <Header/>
+       <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/upload' element={<Upload />}/>
+          <Route path='/video/:id' element={<Home />}/>
+        </Routes>
+    </BrowserRouter>
+      
+  );
   }
 }
 
+
 export default App;
+
