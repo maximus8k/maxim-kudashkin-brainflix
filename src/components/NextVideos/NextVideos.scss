@@ -1,24 +1,82 @@
-@use '../../styles/partials/colors' as *;
-@use '../../styles/partials/mixins' as *;
+@use "../../styles/partials/colors.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/global.scss" as *;
 
-.next__header{
-    font-size: 24px;
-    font-weight: 400;
-    color: $Silver;
-}
-.next__listing{
-    padding-left: 1rem;
-}
+.videos {
+	margin: 0 1rem;
+	border-top: 1px solid $Mercury;
 
-.next__header{
-    padding-left: 1rem;
-}
+	@include tablet {
+		margin: 0 2.25rem;
+	}
 
-@include desktop{
-    .next__header{
-        padding-top: 1.5rem;
-    }
-    .next{
-        margin-left: 1rem;
-    }
+	@include desktop {
+		border-top: none;
+		border-left: 1px solid $Mercury;
+		padding-left: 1.5rem;
+		box-sizing: border-box;
+		width: unset;
+		margin: 0 auto;
+		width: 64rem;
+	}
+
+	&__video {
+		cursor: pointer;
+		user-select: none;
+
+		margin: 1.5rem 0;
+		width: 100%;
+		max-height: 5rem;
+
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		@include desktop {
+			flex-shrink: 2;
+		}
+	}
+
+	&__header {
+		margin-top: 1.5rem;
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+		font-weight: 600;
+		color: $Silver;
+
+		@include tablet {
+			margin-top: 3rem;
+			margin-bottom: 2.25rem;
+		}
+	}
+
+	&__thumbnail {
+		aspect-ratio: 16/9;
+		max-width: 35%;
+		max-height: 4em;
+		flex-shrink: 0;
+		background-color: $Mercury;
+		border-radius: 0.25rem;
+		overflow: hidden;
+
+		& > img {
+			width: 100%;
+		}
+	}
+	&__text {
+		max-height: 4em;
+		height: 4em;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		min-width: 0;
+	}
+	&__title {
+		font-weight: 600;
+	}
+	&__channel {
+		min-width: 0;
+	}
 }

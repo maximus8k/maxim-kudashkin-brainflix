@@ -1,29 +1,32 @@
 import "./Header.scss";
-import logo from "../../assets/logo/BrainFlix-logo.svg";
-import search from "../../assets/icons/search.svg";
-import avatar from "../../assets/images/Mohan-muruge.jpg";
-import upload from "../../assets/icons/upload.svg"
+import Button from "../UploadButton/UploadButton";
+import SearchBar from "../SearchBar/SearchBar";
+import IconImage from "../IconImage/IconImage";
+import Upload from "../../assets/icons/upload.svg";
+import DefaultIcon from "../../assets/images/Mohan-muruge.jpg";
+import Logo from "../../assets/logo/BrainFlix-logo.svg";
+import { Link } from "react-router-dom";
 
-function Header(){
-
-    return(
-        <header>
-        <nav className="menu">
-            <a href=""><img className="menu__logo" src={logo} alt="Brainflix logo"/></a>
-            <div className="container">
-            <div className="menu__bar">
-            <input className="menu__bar-input" id="search" type="search" name="search" placeholder="Search"/>
-            <img className="menu__bar--search-icon" src={search} alt="search"/>
-            <img className="menu__bar--avatar" src={avatar} alt="avatar"/>
-            </div>
-            <div className="menu__button--container">
-            <button className="menu__button">UPLOAD</button>
-            <img className="menu__button-image" src={upload} alt="upload"/>
-            </div>
-            </div>
-        </nav>
-        </header>
-    )
+function Nav() {
+	return (
+		<nav className="nav">
+			<div className="nav__logo">
+				<Link to={"/"}>
+					<img src={Logo} alt="BrainStation Logo"></img>
+				</Link>
+			</div>
+			<div className="nav__rightbox">
+				<div className="nav__search">
+				<SearchBar></SearchBar>
+					<IconImage src={DefaultIcon} className="nav__icon"></IconImage>
+				</div>
+				<Link to={"/upload"}>
+					<Button icon={Upload}>Upload</Button>
+				</Link>
+				<IconImage src={DefaultIcon} className="nav__icon--tablet"></IconImage>
+			</div>
+		</nav>
+	);
 }
 
-export default Header
+export default Nav;

@@ -1,0 +1,39 @@
+@use "../../styles/partials/colors.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/global.scss" as *;
+
+.search {
+	min-height: 2.5rem;
+
+	border-radius: 0.25rem;
+	border: 1px solid $Mercury;
+	padding: 0 0.75rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	gap: 1rem;
+
+	@include tablet {
+		width: 20vw;
+	}
+
+	&__icon {
+		height: 1.25rem;
+	}
+	&__input {
+		padding: 0;
+		border: none;
+		width: 80%;
+
+		&::placeholder {
+			font-size: 1rem;
+			opacity: 100;
+			font-size: 0.9rem;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+}

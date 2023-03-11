@@ -1,0 +1,49 @@
+@use "../../styles/partials/colors.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/global.scss" as *;
+
+.comment {
+	border-bottom: 1px solid $Mercury;
+	display: flex;
+	gap: 1rem;
+	padding: 2rem 0;
+	width: 100%;
+	min-height: 5rem;
+
+	&__img {
+		min-width: 2.25rem;
+		height: 2.25rem;
+		border-radius: 50%;
+		background-color: $Mercury;
+		transform: translateY(-10%);
+
+		@include tablet {
+			min-width: 3rem;
+			height: 3rem;
+		}
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		padding-right: 1rem;
+	}
+
+	&__user {
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+
+	&__time {
+		color: $Silver;
+		display: inline-block;
+		width: 6rem;
+		text-align: right;
+	}
+
+	&__box {
+		width: 100%;
+	}
+}

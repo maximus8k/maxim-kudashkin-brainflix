@@ -1,0 +1,45 @@
+@use "../../styles/partials/colors.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/global.scss" as *;
+
+.button {
+	color: white;
+	background-color: $Blue;
+	border-radius: 0.25rem;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	min-height: 3rem;
+	height: min-content;
+	width: 100%;
+
+	cursor: pointer;
+	&:hover {
+		background-color: $Dark-Blue;
+	}
+	@include tablet {
+		min-width: 11rem;
+		width: fit-content;
+		padding: 0.25rem 2rem;
+	}
+
+	&__icon {
+		width: 1.5rem;
+		height: 1.5rem;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translate(50%, -50%);
+	}
+	&__text {
+		text-transform: uppercase;
+		margin: 0;
+		font-weight: 600;
+	}
+	&--inverted {
+		background-color: $White;
+		color: $Blue;
+	}
+}

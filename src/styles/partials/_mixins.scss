@@ -1,13 +1,14 @@
-// Breakpoint-Tablet
-@mixin tablet{
-    @media (min-width: 768px){
-        @content;
-    }
+@use "./colors" as *;
+
+@mixin tablet {
+	@media only screen and (min-width: 768px) {
+		@content;
+	}
 }
 
-//Breakpoint-Desktop
-@mixin desktop{
-    @media (min-width: 1280px){
-        @content;
-    }
+@mixin desktop {
+	@media only screen and (min-width: 1280px) {
+		@content;
+	}
 }
+
